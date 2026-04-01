@@ -1,2 +1,1 @@
 # SCDZJXZYJSXY-campus_auth
-由Claude AI使用Python编写的一个校园宽带自动认证软件
