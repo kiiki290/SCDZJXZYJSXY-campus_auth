@@ -2,14 +2,12 @@
 
 针对四川电子机械职业技术学院的校园宽带，实现全自动登录。支持单次认证、失败自动重试、断线自动重连。
 
-技术难点在于认证页面部署了重度混淆的反爬 JS，且服务端通过 Java URL Rewriting（而非 Cookie）传递 JSESSIONID，导致常规自动化方案失效。最终方案通过 Playwright 原样透传反爬 JS，从 Frame URL 路径段提取 JSESSIONID，完整还原浏览器认证流程。
-
 ## 环境要求
 
 - Python 3.11
 - Windows（其他平台理论可用，路径需自行调整）
 
-## 安装
+## 安装依赖
 
 ```bash
 pip install "playwright==1.58.0" "ddddocr==1.4.11" "numpy<2" "onnxruntime==1.16.3"
